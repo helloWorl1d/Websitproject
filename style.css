@@ -1,0 +1,1721 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: 100%;
+    font-family: 'Nunito Sans', 'sans-serif';
+    /*outline: 1px solid red;*/
+}
+
+
+body{
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    background-color: #ffffff;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.navbar{
+    display: flex;
+    position: sticky;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 50px;
+    height: 75px;
+    top: 0;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: none; 
+    transition: box-shadow 0.4s ease-in-out;
+    z-index: 10;
+}
+
+.navbar.scrolled {
+    box-shadow: 0 4px 7px rgba(0, 0, 0, 0.1); 
+}
+
+.navbar h2{
+    font-weight: 700;
+    font-size: 40px;
+}
+
+.navbar ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar ul li{
+    display: inline-block;
+    list-style: none;
+   
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    display: block;
+    color: black;
+    font-weight: 700;
+    font-size: 20px;
+    margin-right: 27px;
+    position: relative;
+    transition: color 0.5s ease;
+}
+
+.navbar ul li:hover a{
+    color: grey;
+}
+.navbar ul li a::before{
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0px;
+    width: 0%;
+    height: 2px;
+    border-radius: 7px;
+    background-color: black;
+    transition: width .5s ease;
+}
+.navbar ul li a:hover::before {
+    width: 100%;
+}
+
+.rent-btn{
+    background-color: black;
+    text-transform: uppercase;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 5px 20px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+
+.rent-btn:hover{
+    transform: scale(1.07);
+}
+.rent-btn a{
+    text-decoration: none;
+    color: white;
+}
+.line{
+    display: none;
+}
+
+@media (max-width: 400px) {
+    .navbar h2 {
+        font-size: 20px;
+    }
+    .navbar ul li a, .rent-btn {
+        display: none;
+    }
+    .line{
+        display: flex;
+        font-size: 18px;
+        color: black;
+    }
+}
+
+/* 500px */
+@media (max-width: 500px) {
+    .navbar h2 {
+        font-family: 'Nunito Sans';
+        font-size: 25px;
+    }
+    .navbar ul li a, .rent-btn {
+        display: none;
+    }
+    .line{
+        display: flex;
+        font-size: 18px;
+        color: black;
+    }
+}
+
+.hero-section{
+    padding: 0px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    margin-top: 1%;
+}
+.hero-section h4{
+    font-family: 'Poppins';
+    font-size: 45px;
+    font-weight: 600;
+    width: 450px;
+    text-transform: capitalize;
+}
+.car123{
+    font-size: 50px;
+    font-weight: 600;
+}
+.hero-section p{
+    font-family: 'Poppins';
+    font-size: 18px;
+    font-weight: 500;
+    text-align: justify;
+    width: 450px;
+    margin-bottom: 20px;  
+}
+.book-btn{
+    font-family: 'Poppins';
+    background-color: black;
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: 600;
+    padding: 7px 21px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: transform .5s ease;
+}
+.book-btn:hover{
+    transform: scale(1.07);
+}
+
+.hero-img{
+    width: 90%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    padding-bottom: 40px;
+    margin-left: 20%;
+    
+}
+
+/* 400px */
+@media (max-width: 400px) {
+    .hero-section {
+        flex-direction: column;
+        padding: 20px;
+    }
+    .hero-section h4 {
+        font-size: 24px;
+        width: 100%;
+        text-align: center;
+    }
+    .car123 {
+        font-size: 28px;
+        text-align: center;
+    }
+    .hero-section p {
+        font-size: 14px;
+        width: 100%;
+        text-align: center;
+    }
+    .book-btn {
+        font-size: 16px;
+        padding: 5px 15px;
+    }
+}
+
+/* 500px */
+@media (max-width: 500px) {
+    .hero-section {
+        padding: 30px;
+        flex-direction: column;
+    }
+    .hero-section h4 {
+        font-size: 20px;
+    }
+    .car123 {
+        font-size: 20px;
+    }
+    .hero-section p {
+        font-size: 10px;
+    }
+    .book-btn {
+        font-size: 18px;
+    }
+    .hero-img{
+        display: none;
+    }
+}
+#navbar{
+    scroll-snap-type: y mandatory;
+}
+
+/* This part is the car cards*/
+
+section{
+    font-family: 'Poppins';
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+    font-size: 18px;
+}
+
+
+#Home{
+    height: 100vh;
+    padding-top: 100px;
+    margin-top: -113%;
+}
+
+html{
+    scroll-behavior: smooth;
+    scroll-padding: 
+    var (--scroll-padding, 10rem);
+}
+
+#Cars{
+    background-color: white;
+    height: 100vh;
+    display: flex;
+    margin-top: -200%;
+    flex-direction: column;
+}
+
+#cars{
+    width: 100px;
+    max-width: 100%;
+    height: auto;   
+}
+.car{
+    margin-top: -1%;
+}
+.cars{
+    font-family: 'Poppins';
+    font-size: 70px;
+    font-weight: 700;
+    color: #000000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 0px;
+}
+
+.para{
+    font-family: 'Poppins';
+    font-weight: 700;
+    font-size: 30px;
+    display: flex;
+    justify-content: left;
+    align-items: flex-start;
+    margin-left: 100px;
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    gap: 50px;
+    margin-top: 10px;
+    
+}
+.container img{
+    display: flex;
+    height: auto;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+}
+.box{
+    width: 350px;
+    height: 450px;
+    display: flex;
+    border-radius: 12px;
+    background-color: #f0f0f0;
+    color: rgb(0, 0, 0);
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.25), 0 12px 12px rgba(0, 0, 0, 0.25);
+    flex-direction: column;
+    transition: .5s ease;
+}
+.box:hover{
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 3px rgba(0, 0, 0, 0.23);
+    transform: translate(0px, -10px);
+}
+
+.rentbtn{
+    display: flex;
+    border: none;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-color: #000000;
+    padding: 5px 25px;
+    cursor: pointer;
+    justify-content: center;
+    text-align: center;
+    font-size: 29px;
+    margin-top: 19px;
+}
+.rentbtn a{
+    display: flex;
+    justify-content: center;
+    font-family: 'Poppins';
+    font-weight: 600;
+    text-decoration: none;
+    color: #ffffff;
+    transition: color 0.5s ease;
+}
+
+.rentbtn:hover a{
+    color:grey;
+}
+
+.price{
+    font-family: 'Poppins';
+    font-weight: 600;
+    display: flex;
+    font-size: 20px;
+    margin: 12px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+#box1 h3{
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 27px;
+    margin: 5px;
+    text-align: center;
+} 
+
+#box1 p{
+    display: flex;
+    font-size: 18px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 5px;
+    text-align: center;
+    text-align: justify;
+}
+
+#box2 h3{
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 27px;
+    margin: 5px;
+    text-align: center;
+}
+
+#box2 p{
+    display: flex;
+    font-size: 18px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 5px;
+    text-align: center;
+    text-align: justify;
+}
+
+#box3 h3{
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 27px;
+    margin: 5px;
+    text-align: center;
+}
+
+#box3 p{
+    display: flex;
+    font-size: 18px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 5px;
+    text-align: center;
+    text-align: justify;
+}
+
+#box4 h3{
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 27px;
+    margin: 5px;
+    text-align: center;
+}
+
+#box4 p{
+    display: flex;
+    font-size: 18px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 5px;
+    text-align: center;
+    text-align: justify;
+}
+
+#box5 h3{
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 27px;
+    margin: 5px;
+    text-align: center;
+}
+
+#box5 p{
+    display: flex;
+    font-size: 18px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 5px;
+    text-align: center;
+    text-align: justify;
+}
+
+/* 500px */
+@media (max-width: 500px) {
+    .container{
+        margin-top: 1rem !important;
+    }
+    .container .box{
+        width: 280px !important;
+        height: 380px !important; 
+    }
+    #Cars .cars{
+        margin-top: -50rem !important;
+        font-size: 5rem !important;
+    }
+    #Cars .para{
+        margin-left: 0rem !important;
+        display: flex;
+        justify-content: center;
+        font-size: 2rem !important;
+    }
+    #box1 h3, #box2 h3, #box3 h3, #box4 h3, #box5 h3 {
+        font-size: 25px !important; /* Larger heading size inside boxes */
+    }
+    #box1 p, #box2 p, #box3 p, #box4 p, #box5 p{
+        margin-bottom: -2px !important;
+    }
+    #Cars .container p {
+        font-size: 1rem !important; /* Larger paragraph text inside boxes */
+    }
+     #Cars .box button{
+        margin-top: 13.5px !important;
+    }
+    .rentbtn{
+        margin-top: 10px !important;
+        font-size: 20px !important;
+    }
+}
+
+/*
+.main{
+    width: 1130px;
+    max-width: 95px;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}*/
+.about {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh;
+    margin-top: -20%;
+    gap: 20px;
+}
+.theabout {
+    max-width: 40%; 
+    margin-left: 45%; 
+    margin-top: -58%;
+}
+
+.theabout h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 5rem;
+    font-weight: 700;
+    margin-top: 250px;
+}
+.theabout h2, h5, p, .morebtn{
+    display: flex;   
+}
+
+.theabout h5 {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 35px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+}
+
+.theabout p {
+    font-family: 'Poppins', sans-serif;
+    text-align: justify;
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 35px;
+}
+
+.morebtn {
+    font-family: 'Poppins', sans-serif;
+    background-color: #000000;
+    color: #f0f0f0;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+.morebtn:hover {
+    transform: scale(1.07);
+}
+.about img {
+    display: flex;
+    width: 43%;
+    max-width: 100%;
+    height: auto;
+    margin-left: -0.2%;
+    margin-top: -2%;
+}
+
+@media (max-width: 500px) {
+     .about{
+        width: 100% !important;
+        height: 100vh !important;
+        margin-top: -25% !important;   
+        background-color: rgb(255, 0, 0);
+    }
+    .theabout{
+        margin-top: 100% !important;
+        width: 100% !important;
+       
+    }
+    .about img {
+        display: none;
+    }
+
+    .about .theabout h2 {
+        font-size: 2rem !important; 
+        width: 100% !important;
+        margin-top: 450% !important;
+    }
+
+    .theabout h5 {
+        font-size: 20px;
+        width: 100% !important;
+    }
+
+    .about .theabout p {
+        font-size: 16px !important;
+        width: 100% !important;
+    }
+}
+
+@media (max-width: 800px) {
+    .about{
+        width: 100% !important;
+        height: 100vh !important;
+        margin-top: -25% !important;   
+    }
+    .theabout{
+        margin-top: 100% !important;
+        width: 100% !important;
+       
+    }
+    .about img {
+        display: none;
+    }
+
+    .about .theabout h2 {
+        font-size: 2rem !important; 
+        width: 100% !important;
+        margin-top: -140% !important;
+    }
+
+    .theabout h5 {
+        font-size: 20px;
+        width: 100% !important;
+    }
+
+    .about .theabout p {
+        font-size: 16px !important;
+        width: 100% !important;
+    }
+}
+
+@media (max-width: 1025px) {
+    .about{
+        width: 100% !important;
+        height: 100vh !important;
+        margin-top: 50% !important;   
+        
+    }
+    .theabout{
+        margin-top: 100% !important;
+        width: 100% !important;
+       
+    }
+    .about img {
+        display: none;
+    }
+
+    .about .theabout h2 {
+        font-size: 2rem !important; 
+        width: 100% !important;
+        margin-top: -110% !important;
+        margin-left: -71%;
+    }
+
+    .theabout h5 {
+        font-size: 20px;
+        width: 100% !important;
+        margin-left: -71%;
+    }
+
+    .about .theabout p {
+        font-size: 16px !important;
+        width: 100% !important;
+        margin-left: -71%;
+    }
+    .about .morebtn{
+        margin-left: -71%;
+    }
+}
+
+@media (max-width: 1450px) {
+    .about {
+        width: 100% !important;
+        height: 120vh !important;
+        margin-top: -20% !important;
+    }
+    .about img {
+        width: 500px !important;
+        left: -17% !important;
+        margin-bottom: 20% !important;
+    }
+
+     .about .theabout h2  {
+        font-size: 65px !important;
+        margin-top: 25%;
+    }
+
+    .theabout h5 {
+        font-size: 25px;
+    }
+
+}
+
+
+
+#Contacts .con{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.container-contact .con h2{
+    font-family: 'Poppins';
+    font-size: 30px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: -75%;
+}
+.container-contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+
+}
+.container-contact .row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+
+.lcolumn{
+    display: flex;
+    flex-direction: column;
+    
+}
+.lcolumn , .Rsection{
+    margin-top: 2%;
+}
+
+.lcolumn h2{
+    font-family: 'Poppins';
+    font-weight: 700;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.lcolumn .details{
+    font-family: 'Poppins';
+    font-weight: 700;
+    font-size: 20px;
+    margin: 10px;
+    display: flex;
+    text-align: justify;
+}
+
+.lcolumn .icongroup{
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    margin: 10px;
+}
+.socialicon{
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    gap: 10px;
+    margin: 10px;
+    border: none;
+    
+    
+}
+.socialicon i{
+    background-color: #000000;
+    color: #ffffff;
+    padding: 7px 10px;
+    border-radius: 10px;
+}
+
+
+.Rsection{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin-right: 15%;
+}
+
+
+.message{
+    font-family: 'Poppins';
+    font-weight: 700;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: -4%;
+}
+
+.input-box input{
+    height: 100%;
+    width: 25rem;
+}
+.input-box textarea{
+    height: 130%;
+    width: 150%;
+}
+
+.input-box {
+    height: 50px;
+    width: 140%;
+    margin: 10px 0px;
+}
+.input-box input, .input-box textarea {
+    font-family: 'Poppins';
+    font-size: 16px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.input-box input:focus, .input-box textarea:focus {
+    border-color: #007bff;
+}
+
+.sendbtn button {
+    font-family: 'Poppins';
+    font-size: 18px;
+    padding: 10px 20px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 15px;
+}
+
+.sendbtn button:hover {
+    background-color: #555555;
+}
+    
+.copy{
+    font-family: 'Poppins';
+    font-size: 16px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding: 15px;
+
+}
+
+@media(min-width: 2500px){
+    /* NAVBAR RESPONSIVENESS */
+    .navbar {
+        padding: 0px 100px; 
+    }
+
+    .navbar h2 {
+        font-size: 50px; 
+    }
+
+    .navbar ul li a {
+        font-size: 27px; 
+        margin-right: 40px; 
+    }
+
+    .rent-btn {
+        font-size: 27px; 
+        padding: 10px 25px; 
+    }
+
+    /* HERO SECTION */
+    .hero-section {
+        margin-top: 3.5rem !important;
+        padding: 0px 150px;
+    }
+    .hero-section h4 {
+        font-size: 5rem !important;
+        width: 800px !important;
+    }
+    .car123 {
+        font-size: 5rem !important;
+    }
+    .hero-section p {
+        font-size: 2rem !important;
+        width: 700px !important;
+    }
+    .book-btn {
+        font-size: 3rem !important;
+        padding: 10px 30px;
+    }
+    .hero-img {
+        width: 80% !important;
+        margin-left: 15% !important;
+    }
+    #Home{
+        height: 80% !important;
+    }
+
+    /* CARS */
+    #Cars{
+        height: 100vh !important;
+        padding-top: 80% !important;
+        margin-top: 115% !important;
+    }
+    .container{
+        margin-top: 1rem !important;
+    }
+    .box{
+        width: 25% !important;
+        height: 30% !important; 
+    }
+    .cars{
+        margin-top: -77% !important;
+        font-size: 8rem !important;
+    }
+    #Cars .para{
+        margin-left: 9.9rem !important;
+        font-size: 3.5rem !important;
+    }
+  
+    #box1 h3, #box2 h3, #box3 h3, #box4 h3, #box5 h3 {
+        font-size: 40px !important; 
+    }
+
+    #Cars p {
+        font-size: 30px !important; 
+    }
+    .rentbtn{
+        margin-top: 22px !important;
+        font-size: 40px !important;
+    }
+
+    /* ABOUT US */
+
+    .about {
+        width: 100% !important;
+        height: 95vh !important;
+        margin-top: 1% !important;
+    }
+    .about .main img {
+        width: 33% !important;
+        margin-left: -0.3% !important;
+        margin-bottom: -16% !important;
+    }
+
+     .about .theabout h2  {
+        font-size: 8rem !important;
+        margin-top: 105% !important;
+    }
+
+    .theabout h5 {
+        font-size: 5rem !important;
+    }
+
+    .about .theabout p{
+        font-size: 30px !important;
+    }
+    .about .theabout .morebtn{
+        font-size: 40px !important;
+    }
+
+    /* CONTACT US */
+        .container-contact .row {
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+        #Contacts #conta{
+            font-size: 8rem !important;
+            margin-top: -20% !important;
+        }
+    
+        .lcolumn h2 {
+            font-size: 3.5rem !important;
+            margin-top: -15% !important; 
+        }
+        .lcolumn .details{
+            font-size: 2.3rem !important;
+        }
+        .lcolumn .icongroup{
+            font-size: 2.5rem !important;
+            margin: 10px;
+        }
+        .lcolumn .socialicon{
+            font-size: 2.5rem !important;
+        }
+        .Rsection .message{
+            font-size: 3.5rem !important;
+            margin-top: -4rem !important;
+        }
+    
+        .input-box input {
+            height: 5rem !important;
+            width: 160% !important;
+        }
+    
+        .input-box textarea {
+            height: 10rem !important;
+            width: 160% !important;
+        }
+        .input-box{
+            margin: 3rem 0rem !important;
+        }
+        .input-box input, .input-box textarea{
+            font-size: 2rem !important;
+        }
+        .sendbtn button{
+            font-size: 2rem !important;
+            margin-top: 5rem !important;
+        }
+        .copy{
+            font-size: 2rem !important;
+        }
+}
+
+@media (max-width: 1920px){
+     /* NAVBAR RESPONSIVENESS */
+     .navbar {
+        padding: 0px 100px; 
+    }
+
+    .navbar h2 {
+        font-size: 43px; 
+    }
+
+    .navbar ul li a {
+        font-size: 23px; 
+        margin-right: 40px; 
+    }
+
+    .rent-btn {
+        font-size: 23px; 
+        padding: 10px 25px; 
+    }
+
+    /* HERO SECTION */
+    .hero-section {
+        margin-top: 1% !important;
+        padding: 0px 100px;
+    }
+    .hero-section h4 {
+        font-size: 40px !important;
+        width: 440px !important;
+    }
+    .car123 {
+        font-size: 45px !important;
+    }
+    .hero-section p {
+        font-size: 20px !important;
+        width: 470px !important;
+    }
+    .book-btn {
+        font-size: 25px !important;
+        padding: 7px 21px;
+    }
+    .hero-img {
+        width: 80% !important;
+        margin-left: 23% !important;
+    }
+    #Home{
+        height: 80% !important;
+    }
+
+    /* CARS */
+    #Cars{
+        height: 100vh !important;
+        padding-top: 100% !important;
+        margin-top: 112% !important;
+        /* border: 3px solid red; */
+    }
+    .container{
+        margin-top: 1rem !important;
+    }
+    .box{
+        width: 25% !important;
+        height: 30% !important; 
+    }
+    .cars{
+        margin-top: -96% !important;
+        font-size: 6rem !important;
+    }
+    #Cars .para{
+        margin-left: 6.5rem !important;
+        font-size: 3rem !important;
+    }
+  
+    #box1 h3, #box2 h3, #box3 h3, #box4 h3, #box5 h3 {
+        font-size: 30px !important; 
+    }
+
+    #Cars p {
+        font-size: 20px !important; 
+    }
+    .rentbtn{
+        margin-top: 22px !important;
+        font-size: 30px !important;
+    }
+
+    /* ABOUT US */
+
+    .about {
+        height: 90vh !important;
+        padding-top: 80% !important;
+        margin-top: 1% !important;
+         /* border: 3px solid red; */
+    }
+    .about img {
+        width: 33% !important;
+        margin-left: -0.1% !important;
+        margin-top: -70% !important;
+    }
+
+     .about .theabout h2  {
+        font-size: 5rem !important;
+        margin-top: 55% !important;
+    }
+
+    .theabout h5 {
+        font-size: 3rem !important;
+    }
+
+    .about .theabout p{
+        font-size: 20px !important;
+    }
+    .about .theabout .morebtn{
+        font-size: 30px !important;
+    }
+
+    /* CONTACT US */
+        .container-contact .row {
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+        #Contacts #conta{
+            font-size: 5rem !important;
+            margin-top: -13% !important;
+        }
+    
+        .lcolumn h2 {
+            font-size: 2.5rem !important;
+            margin-top: -5% !important; 
+        }
+        .lcolumn .details{
+            font-size: 1.5rem !important;
+        }
+        .lcolumn .icongroup{
+            font-size: 1.3rem !important;
+            margin: 10px;
+        }
+        .lcolumn .socialicon{
+            font-size: 1.3rem !important;
+        }
+        .Rsection .message{
+            font-size: 2.5rem !important;
+            margin-top: 3.5rem !important;
+        }
+    
+        .input-box input {
+            height: 3rem !important;
+            width: 160% !important;
+        }
+    
+        .input-box textarea {
+            height: 10rem !important;
+            width: 160% !important;
+        }
+        .input-box{
+            margin: 1rem 0rem !important;
+        }
+        .input-box input, .input-box textarea{
+            font-size: 1rem !important;
+        }
+        .sendbtn button{
+            font-size: 1.5rem !important;
+            margin-top: 7rem !important;
+        }
+        .copy{
+            font-size: 1.5rem !important;
+        }
+}
+
+@media(max-width: 1450px) {
+    /* NAVBAR RESPONSIVENESS */
+    .navbar {
+        padding: 0px 100px; 
+    }
+
+    .navbar h2 {
+        font-size: 40px; 
+    }
+
+    .navbar ul li a {
+        font-size: 20px; 
+        margin-right: 40px; 
+    }
+
+    .rent-btn {
+        font-size: 20px; 
+        padding: 10px 25px; 
+    }
+
+    /* HERO SECTION */
+    .hero-section {
+        margin-top: 1% !important;
+        padding: 0px 100px;
+    }
+    .hero-section h4 {
+        font-size: 40px !important;
+        width: 430px !important;
+    }
+    .car123 {
+        font-size: 43px !important;
+    }
+    .hero-section p {
+        font-size: 18px !important;
+        width: 425px !important;
+    }
+    .book-btn {
+        font-size: 20px !important;
+        padding: 7px 21px;
+    }
+    .hero-img {
+        width: 80% !important;
+        margin-left: 21% !important;
+    }
+    #Home{
+        height: 80% !important;
+    }
+
+    /* CARS */
+    #Cars{
+        height: 100vh !important;
+        padding-top: 88% !important;
+        margin-top: 110% !important;
+         /* border: 3px solid red; */
+    }
+    .container{
+        margin-top: 1rem !important;
+    }
+    .box{
+        width: 25% !important;
+        height: 30% !important; 
+    }
+    .cars{
+        margin-top: -83% !important;
+        font-size: 5rem !important;
+    }
+    #Cars .para{
+        margin-left: 4.8rem !important;
+        font-size: 2.5rem !important;
+    }
+  
+    #box1 h3, #box2 h3, #box3 h3, #box4 h3, #box5 h3 {
+        font-size: 25px !important; 
+    }
+
+    #Cars p {
+        font-size: 18px !important; 
+    }
+    .rentbtn{
+        margin-top: 20px !important;
+        font-size: 25px !important;
+    }
+
+    /* ABOUT US */
+
+    .about {
+        width: 100% !important;
+        height: 95vh !important;
+        padding-top: 55%;
+        margin-top: 1% !important;
+        /* border: 3px solid red; */
+    }
+    .about .main img {
+        position: absolute;
+        width: 35% !important;
+        margin-left: 17% !important;
+        /* margin-bottom: -20% !important; */
+    }
+    .theabout{
+        margin-top: -89% !important;
+    }
+    .about img{
+        margin-top: -45% !important;
+    }
+    
+     .about .theabout h2  {
+        font-size: 5rem !important;
+    }
+
+    .theabout h5 {
+        font-size: 2.5rem !important;
+    }
+
+    .about .theabout p{
+        font-size: 18px !important;
+    }
+    .about .theabout .morebtn{
+        font-size: 22px !important;
+    }
+
+    /* CONTACT US */
+        .container-contact .row {
+            height: 100vh !important;
+            padding-top: 60% !important;
+            margin-top: 13% !important;
+            flex-direction: row;
+            justify-content: space-evenly;
+            /* border: 3px solid blue; */
+        }
+        #Contacts #conta{
+            font-size: 5rem !important;
+            margin-top: 70% !important;
+        }
+    
+        .lcolumn h2 {
+            font-size: 2rem !important;
+            margin-top: -155% !important; 
+        }
+        .lcolumn .details{
+            font-size: 1.2rem !important;
+        }
+        .lcolumn .icongroup{
+            font-size: 1.1rem !important;
+            margin: 10px;
+        }
+        .lcolumn .socialicon{
+            font-size: 1rem !important;
+        }
+        .Rsection .message{
+            font-size: 2rem !important;
+            margin-top: -42.4rem !important;
+        }
+    
+        .input-box input {
+            height: 3rem !important;
+            width: 160% !important;
+        }
+    
+        .input-box textarea {
+            height: 10rem !important;
+            width: 160% !important;
+        }
+        .input-box{
+            margin: 1rem 0rem !important;
+        }
+        .input-box input, .input-box textarea{
+            font-size: 1rem !important;
+        }
+        .sendbtn button{
+            font-size: 1.5rem !important;
+            margin-top: 7rem !important;
+        }
+        .copy{
+            font-size: 1.5rem !important;
+            margin-top: 30% !important;
+        }
+    
+}
+
+@media(max-width: 1050px){
+    /* NAVBAR */
+    .navbar h2 {
+        font-family: 'Nunito Sans';
+        font-size: 33px !important;
+    }
+    .navbar ul li a {
+        font-family: 'Nunito Sans';
+        font-size: 16px !important;
+    }
+    .rent-btn{
+        font-family: 'Nunito Sans';
+        font-size: 16px !important;
+    }
+
+    /* HERO SECTION */
+    .hero-section {
+        padding: 50px 80px;
+        margin-top: -5% !important;
+    }
+    .hero-section h4 {
+        font-family: 'Poppins';
+        font-weight: 700;
+        font-size: 35px !important;
+        width: 350px !important;
+    }
+    .car123 {
+        font-family: 'Nunito Sans';
+        font-weight: 700;
+        font-size: 35px !important;
+    }
+    .hero-section p {
+        font-family: 'Poppins';
+        font-weight: 500;
+        font-size: 16px !important;
+        width: 400px;
+    }
+    .book-btn {
+        font-size: 20px !important;
+    }
+    .hero-img {
+        width: 100% !important;
+        margin-left: 7% !important;
+    }
+
+    /* CARS */
+    #Cars{
+        height: 100vh !important;
+        padding-top: 110% !important;
+        margin-top: 105% !important;
+        /* border: 3px solid red;  */
+    }
+    .container{
+        margin-top: 1rem !important;
+    }
+    .box{
+        width: 26% !important;
+        height: 30% !important; 
+    }
+    .cars{
+        margin-top: -103% !important;
+        font-size: 4rem !important;
+    }
+    #Cars .para{
+        margin-left: 3rem !important;
+        font-size: 2rem !important;
+    }
+  
+    #box1 h3, #box2 h3, #box3 h3, #box4 h3, #box5 h3 {
+        font-size: 20px !important; 
+    }
+
+    #Cars p {
+        font-size: 18px !important; 
+    }
+    .rentbtn{
+        margin-top: 22px !important;
+        font-size: 20px !important;
+    }
+
+    /* ABOUT US */
+    .about {
+        width: 100% !important;
+        height: 100vh !important;
+        padding-top: 50% !important;
+        margin-top: 1% !important;
+         /* border: 3px solid red;  */
+
+    }
+    .about .main img {
+        display: none;
+    }
+
+     .about .theabout h2  {
+        font-size: 4rem !important;
+        margin-top: 25rem !important;
+    }
+
+    .theabout h5 {
+        font-size: 2rem !important;
+    }
+
+    .about .theabout p{
+        font-size: 15px !important;
+        width: 770% !important;
+    }
+    .about .theabout .morebtn{
+        font-size: 1.5rem !important;
+    }
+
+    /* CONTACT US */
+    .container-contact{
+        width: 100% !important;
+        height: 100vh !important;
+        padding-top: 90% !important;
+        margin-top: 35% !important;
+         /* border: 3px solid red;  */
+    }
+    .container-contact .row {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    #Contacts #conta{
+        font-size: 4rem !important;
+        margin-top: -123rem !important;
+    }
+
+    .lcolumn h2 {
+        font-size: 1.5rem !important;
+        margin-top: -175rem !important; 
+    }
+    .lcolumn .details{
+        font-size: 1rem !important;
+    }
+    .lcolumn .icongroup{
+        font-size: 1.3rem !important;
+        margin: 10px;
+    }
+    .lcolumn .socialicon{
+        font-size: 1.3rem !important;
+    }
+    .Rsection .message{
+        font-size: 1.5rem !important;
+        margin-top: -96.5rem !important;
+    }
+
+    .input-box input {
+        height: 2rem !important;
+        width: 150% !important;
+    }
+
+    .input-box textarea {
+        height: 4rem !important;
+        width: 20rem !important;
+    }
+    .input-box{
+        margin: 0.5rem 0rem !important;
+    }
+    .input-box input, .input-box textarea{
+        font-size: 1rem !important;
+    }
+    .sendbtn button{
+        font-size: 1rem !important;
+        margin-top: 2rem !important;
+    }
+    .copy{
+        font-size: 1.3rem !important;
+        margin-top: 60rem !important;
+    }
+}
+
+@media(max-width: 800px){
+    .navbar h2 {
+        font-family: 'Nunito Sans';
+        font-size: 30px;
+    }
+    .navbar ul li a, .rent-btn {
+        display: none;
+    }
+    .line{
+        display: flex;
+        font-size: 20px;
+        color: black;
+    }
+
+    /* HERO SECTION */
+    .hero-section {
+        padding: 0px 40px;
+        justify-content: center;
+    }
+    .hero-section h4 {
+        font-family: 'Poppins';
+        font-size: 30px !important;
+        font-weight: 700;
+        width: 300px !important;
+        margin-top: 11% !important;
+    }
+    .car123 {
+        font-family: 'Nunito Sans';
+        font-size: 30px !important;
+        font-weight: 700;
+    }
+    .hero-section p {
+        font-size: 14px !important;
+        width: 700px;
+    }
+    .book-btn {
+        font-size: 20px !important;
+    }
+    .hero-img {
+        display: none;
+    }
+
+    /* CARS */
+    #Cars{
+        height: 100vh !important;
+        padding-top: 130% !important;
+        margin-top: 105% !important;
+        /* border: 3px solid red;  */
+    }
+    .container{
+        margin-top: 1rem !important;
+    }
+    .box{
+        width: 26% !important;
+        height: 30% !important; 
+    }
+    .cars{
+        margin-top: -130% !important;
+        font-size: 4rem !important;
+    }
+    #Cars .para{
+        margin-left: 3rem !important;
+        font-size: 2rem !important;
+    }
+  
+    #box1 h3, #box2 h3, #box3 h3, #box4 h3, #box5 h3 {
+        font-size: 18px !important; 
+    }
+
+    #Cars p {
+        font-size: 16px !important; 
+    }
+    .rentbtn{
+        margin-top: 22px !important;
+        font-size: 20px !important;
+    }
+
+     /* ABOUT US */
+     .about {
+        width: 100% !important;
+        height: 100vh !important;
+        padding-top: 85% !important;
+        margin-top: 1% !important;
+         /* border: 3px solid red;  */
+
+    }
+    .about .main img {
+        display: none;
+    }
+
+     .about .theabout h2  {
+        font-size: 4rem !important;
+        margin-top: 2rem !important;
+    }
+
+    .theabout h5 {
+        font-size: 2rem !important;
+    }
+    .about .theabout p{
+        font-size: 15px !important;
+        width: 870% !important;
+    }
+    .about .theabout .morebtn{
+        font-size: 1.5rem !important;
+    }
+
+    /* CONTACT US */
+    .container-contact{
+        width: 100% !important;
+        height: 100vh !important;
+        padding-top: 90% !important;
+        margin-top: 35% !important;
+         /* border: 3px solid red;  */
+    }
+    .container-contact .row {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    #Contacts #conta{
+        font-size: 4rem !important;
+        margin-top: -97rem !important;
+    }
+
+    .lcolumn h2 {
+        font-size: 1.5rem !important;
+        margin-top: -130rem !important; 
+    }
+    .lcolumn .details{
+        font-size: 1rem !important;
+    }
+    .lcolumn .icongroup{
+        font-size: 1.3rem !important;
+        margin: 10px;
+    }
+    .lcolumn .socialicon{
+        font-size: 1.3rem !important;
+    }
+    .Rsection .message{
+        font-size: 1.5rem !important;
+        margin-top: -74rem !important;
+    }
+
+    .input-box input {
+        height: 2rem !important;
+        width: 150% !important;
+    }
+
+    .input-box textarea {
+        height: 4rem !important;
+        width: 20rem !important;
+    }
+    .input-box{
+        margin: 0.5rem 0rem !important;
+    }
+    .input-box input, .input-box textarea{
+        font-size: 1rem !important;
+    }
+    .sendbtn button{
+        font-size: 1rem !important;
+        margin-top: 2rem !important;
+    }
+    .copy{
+        font-size: 1.3rem !important;
+        margin-top: 60rem !important;
+    }
+}
+
+

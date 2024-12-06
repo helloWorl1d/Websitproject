@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+body{
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    background-color: #ffffff;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.logo{
+    font-family: 'Nunito Sans';
+    font-size: 2rem;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 7px 0px;
+}
+
+.back button{
+    border: none;
+    padding: 7px 14px;
+    background-color: black;
+    margin: 3%;
+    border-radius: 12px;
+    transition: transform 0.5s ease;
+}
+.back button:hover{
+    transform: scale(1.1);
+}
+
+.back a{
+    text-decoration: none;
+    color: #ffffff;
+    font-family: 'Poppins';
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.wrap{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 5% 0%;
+    margin-top: -1%;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    margin: 2%;
+    justify-content: space-evenly;
+    box-sizing: border-box;
+    background-color: #f6f6f6;
+    border-radius: 15px;
+    width: 20%;
+    height: 120%;
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.25), 0 12px 12px rgba(0, 0, 0, 0.25);
+    transition: .5s ease;
+}
+.card:hover{
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 3px rgba(0, 0, 0, 0.23);
+    transform: translate(0px, -10px);
+}
+.info{
+    font-family: 'Poppins';
+    margin: 2.5%;
+}
+.info h4{
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.info p{
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 10px;  
+}
+.over .rent{
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    background-color: black;
+    color: #ffffff;
+    width: 100%;
+    font-size: 35px;
+    font-weight: 700;
+    padding: 7px 15px;
+    border: none;
+    cursor: pointer;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    transition: all .5s;
+}
+.over .rent:hover{
+    background-color: grey;
+}
+
+
